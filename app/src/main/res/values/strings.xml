@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">LazyStep</string>
+    <string name="lazy_step">懒人计步器</string>
+    <string name="step_everyday">每天一万步\n走出健康路</string>
+    <string name="skip">跳过</string>
+    <string name="energy">大卡</string>
+    <string name="sport_time">活动时间</string>
+    <string name="kilometre">公里</string>
+    <string name="reset">重置</string>
+    <string name="start">启动</string>
+    <string name="energy_value">卡</string>
+    <string name="minute">分</string>
+    <string name="hour">小时</string>
 </resources>

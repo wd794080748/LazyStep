@@ -3,4 +3,12 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="fontBlack">#000000</color>
+    <color name="fontWhite">#ffffff</color>
+    <color name="titleBarGackGround">#2196F3</color>
+    <color name="energy_value">#A66608</color>
+    <color name="sport_value">#931540</color>
+    <color name="kilometre_value">#3F51B5</color>
+    <color name="circle">#4CAF50</color>
+    <color name="circle_background">#CBCDCB</color>
 </resources>
