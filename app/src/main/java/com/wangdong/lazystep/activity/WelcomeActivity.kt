@@ -4,6 +4,7 @@ import android.os.Handler
 import android.os.Message
 import android.view.View
 import butterknife.OnClick
+import com.orhanobut.logger.Logger
 import com.wangdong.lazystep.R
 import kotlinx.android.synthetic.main.activity_welcome.*
 
@@ -48,6 +49,7 @@ class WelcomeActivity :BaseActivity() {
                 startActivity(HomeActivity::class.java)
             }else{
                 tv_time.text = msg.what.toString()
+                Logger.d(time)
                 time-=1
                 handler.sendEmptyMessageDelayed(time,1000)
             }

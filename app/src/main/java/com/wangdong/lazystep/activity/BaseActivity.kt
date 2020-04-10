@@ -16,7 +16,7 @@ import com.wangdong.lazystep.application.MyApplication
  *@descripiton
  *@date 2020/4/7 15:16
  */
-abstract class BaseActivity :AppCompatActivity(){
+abstract class BaseActivity : AppCompatActivity(){
     private val isHideAppTitle:Boolean = true
     private val isHideSysTitle:Boolean = false
     public lateinit var handler:Handler

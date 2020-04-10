@@ -6,82 +6,114 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".activity.HomeActivity">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center_vertical"
-        android:background="@color/titleBarGackGround">
-        <TextView
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
-            android:gravity="center"
-            android:textColor="@color/fontWhite"
-            android:layout_height="match_parent"
-            android:text="@string/lazy_step"
-            android:textSize="26sp"/>
-        <ImageView
-            android:id="@+id/iv_settings"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:padding="10dp"
-            android:scaleType="centerCrop"
-            android:layout_alignParentRight="true"
-            android:src="@drawable/setting_icon"/>
-    </RelativeLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:text="@string/energy"
-            style="@style/tv_title" />
-        <TextView
-            android:text="@string/sport_time"
-            style="@style/tv_title" />
-        <TextView
-            android:text="@string/kilometre"
-            style="@style/tv_title" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/tv_energy_value"
-            android:textColor="@color/energy_value"
-            style="@style/tv_title" />
-        <TextView
-            android:id="@+id/tv_sport_value"
-            android:textColor="@color/sport_value"
-            style="@style/tv_title" />
-        <TextView
-            android:id="@+id/kilometre_value"
-            android:textColor="@color/kilometre_value"
-            style="@style/tv_title" />
-    </LinearLayout>
-    <com.wangdong.lazystep.view.MyProgressBar
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        app:color="@color/circle"
-        android:src="@drawable/circle_back"/>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:gravity="center">
-        <Button
-            android:id="@+id/btn_reset"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:text="@string/reset"/>
-        <Button
-            android:id="@+id/btn_start"
-            android:layout_width="100dp"
-            android:layout_marginLeft="50dp"
-            android:layout_height="50dp"
-            android:text="@string/start"/>
-    </LinearLayout>
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/titleBarGackGround"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="@string/lazy_step"
+                    android:textColor="@color/fontWhite"
+                    android:textSize="26sp" />
+
+                <ImageView
+                    android:id="@+id/iv_settings"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:padding="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/setting_icon" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/tv_title"
+                    android:text="@string/energy" />
+
+                <TextView
+                    style="@style/tv_title"
+                    android:text="@string/sport_time" />
+
+                <TextView
+                    style="@style/tv_title"
+                    android:text="@string/kilometre" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_energy_value"
+                    style="@style/tv_title"
+                    android:textColor="@color/energy_value" />
+
+                <TextView
+                    android:id="@+id/tv_sport_value"
+                    style="@style/tv_title"
+                    android:textColor="@color/sport_value" />
+
+                <TextView
+                    android:id="@+id/tv_kilometre_value"
+                    style="@style/tv_title"
+                    android:textColor="@color/kilometre_value" />
+            </LinearLayout>
+
+            <com.wangdong.lazystep.view.MyProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/circle_back"
+                app:color="@color/circle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_reset"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="@string/reset" />
+
+                <Button
+                    android:id="@+id/btn_start"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:text="@string/start" />
+            </LinearLayout>
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/barchart"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_margin="20dp"
+                android:background="@color/circle" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

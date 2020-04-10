@@ -5,6 +5,7 @@ import android.graphics.*
 import android.util.AttributeSet
 import android.view.View
 import com.wangdong.lazystep.R
+import kotlinx.android.synthetic.main.activity_home.view.*
 import kotlin.math.min
 
 /**
@@ -103,7 +104,7 @@ class MyProgressBar @JvmOverloads constructor(context: Context?, attrs: Attribut
         mPaint.color = mContext.resources.getColor(R.color.circle_background)
         canvas?.drawArc(rectF,0f,360f,false,mPaint)
         mPaint.color = mCircleColor
-        canvas?.drawArc(rectF,0f,270f,false,mPaint)
+        canvas?.drawArc(rectF,-90f,270f,false,mPaint)
         canvas?.restore()
     }
 
